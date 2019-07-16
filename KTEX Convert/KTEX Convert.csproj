@@ -95,10 +95,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Condition="'$(Platform)' == 'x64'" Include="KTEXlib.NET, Version=1.0.1.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\x64\KTEXlib.NET.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -179,6 +175,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KTEXlib.NET\ClassLibrary1\ClassLibrary1.vcxproj">
+      <Project>{9a75d5de-3c4f-4ceb-af30-5474f6b19ed7}</Project>
+      <Name>KTEXlib.NET</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
